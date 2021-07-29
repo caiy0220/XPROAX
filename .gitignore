@@ -1,0 +1,9 @@
+__pycache__/
+models/*
+results/*
+generator/checkpoints
+generator/img
+.idea
+output/*
+data
+experiments/storage

@@ -1,0 +1,31 @@
+%YAML 1.2
+---
+cuda_on: True
+seed: 1111
+
+# generator DAAE
+enc: 'mu'
+dec: 'greedy'
+max_len: 35
+batch_size: 256
+dir: './generator/checkpoints/daae/yelp/'
+model_name: 'model.pt'
+vocab: 'vocab.txt'
+
+population: 100
+
+# XPROAX
+intpl_steps: 10
+nearest_in_corpus: 20
+
+# XSPELLS
+max_attempts: 5000
+random_sents: 500
+xspells_range: 1.0 # 0.5
+xspells_expand_rate: 0.0
+valid_neighs: 40
+
+# ABELE
+generation_limit: 20
+pc: 0.5
+pm: 0.2
