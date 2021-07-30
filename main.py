@@ -57,7 +57,7 @@ if __name__ == '__main__':
         number_sentences = int(sys.argv[2])
     else:
         shift = 0
-        number_sentences = 5
+        number_sentences = 10
 
     if len(sys.argv) >= 5:
         dataset = sys.argv[3]
@@ -108,7 +108,7 @@ if __name__ == '__main__':
     log('Explanation module ready')
 
     sur_model = 0
-    num_other_words = 10
+    num_other_words = 3
     vocab_size_limit = 200
     forward_selection = True
 

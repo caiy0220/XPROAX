@@ -1,27 +1,8 @@
 import numpy as np
-import os
-from utils import log
+from utils import log, find_pth2workspace
 from explanator import Explanator
 from sklearn.feature_extraction.text import TfidfVectorizer
 from scipy.spatial.distance import cdist
-
-
-def get_path2target(_target):
-    _cur_pth = os.getcwd()
-    _dir_li = _cur_pth.split('/')
-
-    _found = False
-    _pref = './'
-    for _dir in _dir_li[::-1]:
-        if _dir == _target:
-            _found = True
-            break
-        else:
-            _pref += '../'
-
-    if not _found:
-        _pref = None
-    return _pref
 
 
 def load_data_from_txt(_p, _y):
@@ -56,7 +37,7 @@ def calculate_MRE(source, rec):
 
 
 def main(args):
-    pref = get_path2target(args.workspace)
+    pref = find_pth2workspace(args.workspace)
     pref_data = pref + 'data/' + args.ds + '/'
     file_names = [
         'test0.txt',

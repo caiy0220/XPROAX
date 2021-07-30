@@ -8,10 +8,11 @@ if __name__ == '__main__':
 
     # -mode 0 -ds yelp
     # -mode 1 -ds yelp -model RF -method XPROAX -thresh 0.1
+    # -mode 2
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('-mode', required=True, help='0: reconstruct loss; 1: effectiveness;')
-    parser.add_argument('-ds', required=True, help='name of training set')
+    parser.add_argument('-mode', required=True, help='0: reconstruct loss; 1: effectiveness; 2: stability')
+    parser.add_argument('-ds', help='name of training set')
 
     """ Args for effectiveness """
     parser.add_argument('-model', default='RF', help='model type: RF, DNN')
@@ -31,4 +32,7 @@ if __name__ == '__main__':
         main(args)
     elif args.mode == '1':
         from experiments.effectiveness import main
+        main(args)
+    elif args.mode == '2':
+        from experiments.stability import main
         main(args)

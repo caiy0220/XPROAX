@@ -1,7 +1,5 @@
 import sys
 
-import re
-import string
 import os
 import numpy as np
 from experiments.neigh_loader import file2array
