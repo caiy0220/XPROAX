@@ -7,3 +7,4 @@ generator/img
 output/*
 data
 experiments/storage
+resources
