@@ -1,6 +1,6 @@
 # XPROAX
 This repo contains the source code and necessary resources of the following paper:\
-XPROAX - Local explanations for text classification with progressive neighborhood approximation\
+[XPROAX - Local explanations for text classification with progressive neighborhood approximation](https://ieeexplore.ieee.org/document/9564153)\
 *Yi Cai, Arthur Zimek, Eirini Ntoutsi*
 
 ## Dependencies
